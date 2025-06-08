@@ -56,7 +56,8 @@ window.onload = function() {
     requestAnimationFrame(update); //request the first frame
     setInterval(placePipes, 1500); //place pipes every 1.5 seconds
 
-    document.addEventListener("keydown", handleKey);
+    document.addEventListener("keydown", handleKey); //keyboard controls to move the bird
+    document.addEventListener("mousedown", jumpBird); //mouse click to move the bird
 }
 
 function update(){
@@ -160,7 +161,11 @@ function handleKey(e) {
     if (e.code === "Enter" && gameOver) resetGame();
 }
 
-//
+function jumpBird() {
+    if (gameOver) return; // don't jump if game is over
+    velocityY = -6;
+}
+
 function resetGame() {  
     bird.y      = birdY;
     velocityY   = 0;
