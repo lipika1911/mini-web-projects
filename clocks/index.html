@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Time Toolkit</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-heading">⏱️ Clock Centre</h1>
+    <div class="tabs">
+        <button onclick="showSection('stopwatch')">Stopwatch</button>
+        <button onclick="showSection('digital')">Digital Clock</button>
+        <button onclick="showSection('countdown')">Countdown</button>
+    </div>
+    <div class="watch-section-container">
+        <!-- Stopwatch -->
+        <div id="stopwatch" class="watch-section">
+            <p class="time">
+                <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
+            </p>
+            <button id="start">START</button>
+            <button id="stop">STOP</button>
+            <button id="reset">RESET</button>
+        </div>
+
+        <!-- Digital Clock -->
+        <div id="digital" class="watch-section" style="display: none;">
+            <p class="time" id="digital-time">--:--:-- <span id="ampm"></span></p>
+        </div>
+
+        <!-- Countdown -->
+        <div id="countdown" class="watch-section" style="display: none;">
+            <input type="number" id="count-minutes" placeholder="Minutes" min="0"/>
+            <button onclick="startCountdown()">Start</button>
+            <button onclick="resetCountdown()">Reset</button>
+            <p class="time" id="countdown-time">00:00</p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
