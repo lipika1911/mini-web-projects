@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+button {
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem auto;
+  width: 70%;
+  display: block;
+  border: none;
+  border-radius: 8px;
+  background-color: #0c056d;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    color: #222;
+    background-color: #f2f2f2;
+    border: 1px solid #0c056d;
+    font-weight: bold;
+}
+
+.option-btn {
+  text-align: left;
+  background-color: #e6e6e6;
+  color: #222;
+}
+
+.option-btn:hover {
+  background-color: #f2f2f2;
+  border-color: #ccc;
+}
+
+.option-btn.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.option-btn.wrong {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+#question-number, #score-text {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#result-screen p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+#result-screen button {
+  margin-top: 1rem;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Category Screen -->
+    <div id="category-screen">
+      <h2>Select Category</h2>
+      <div id="category-buttons">
+        <button data-category="javascript">JAVASCRIPT</button>
+        <button data-category="python">PYTHON</button>
+        <button data-category="os">OS</button>
+        <button data-category="dbms">DBMS</button>
+        <button data-category="dsa">DSA</button>
+      </div>
+    </div>
+
+    <!-- Difficulty Screen -->
+    <div id="difficulty-screen" style="display: none;">
+      <h2 id="selected-category-heading">Select Difficulty</h2>
+      <div id="difficulty-buttons">
+        <button data-difficulty="easy">EASY</button>
+        <button data-difficulty="medium">MEDIUM</button>
+        <button data-difficulty="hard">HARD</button>
+      </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" style="display: none;">
+        <div id="question-number"></div>
+        <h2 id="question-text"></h2>
+        <div id="score-text"></div>
+        <div id="options-container"></div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" style="display: none;">
+      <h2>🎉 Quiz Completed!</h2>
+      <p id="result-category"></p>
+      <p id="result-difficulty"></p>
+      <p id="final-score"></p>
+      <button onclick="startOver()">Retake Quiz</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
