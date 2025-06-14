@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mood Tracker</h1>
+      <div class="controls">
+        <label for="view-select">View</label>
+        <select id="view-select">
+          <option value="weekly">Weekly</option>
+          <option value="monthly" selected>Monthly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Mood Legend -->
+    <div class="mood-legend" id="mood-legend"></div>
+
+    <main>
+      <div id="calendar" class="calendar-grid"></div>
+    </main>
+  </div>
+
+  <!-- Mood Picker Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+      <h3>Select Mood</h3>
+      <p id="popup-date"></p>
+      <div class="popup-moods" id="popup-moods">
+        <!-- Mood buttons here -->
+      </div>
+      <button id="close-popup">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
