@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://quiz-api-e8lf.onrender.com/api/quiz";
+const API_BASE_URL = "https://quiz-api-dusky.vercel.app/api/quiz";
 
 let category = "";
 let difficulty = "";
