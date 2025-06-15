@@ -20,20 +20,6 @@ const totalPixels = canvas.width * canvas.height;
 let clearedRatio = 0;
 let isQuoteShown = false;
 
-// Quotes
-const quotes = {
-  list: [
-    "You are amazing just the way you are.",
-    "Believe in your inner magic.",
-    "Shine from within.",
-    "You are enough.",
-    "Reflect, recharge, rise!"
-  ],
-  getRandom() {
-    return this.list[Math.floor(Math.random() * this.list.length)];
-  }
-};
-
 // Eraser size
 const eraserSize = 20;
 
@@ -74,9 +60,20 @@ function clearFogCompletely() {
 }
 
 function showQuote() {
-  quoteBox.textContent = quotes.getRandom();
-  quoteBox.classList.remove('hidden');
-  setTimeout(() => quoteBox.classList.add('show'), 100);
+  quoteBox.textContent = "Fetching inspiration...";
+  quoteBox.classList.remove("hidden");
+
+  fetch("https://quotes-api-psi.vercel.app/quotes/random")
+    .then((res) => res.text())
+    .then((quote) => {
+      quoteBox.textContent = quote;
+      setTimeout(() => quoteBox.classList.add("show"), 100);
+    })
+    .catch((err) => {
+      console.error("Failed to fetch quote:", err);
+      quoteBox.textContent = "Keep going. You're doing great!";
+      setTimeout(() => quoteBox.classList.add("show"), 100);
+    });
 }
 
 resetBtn.addEventListener('click', () => {
