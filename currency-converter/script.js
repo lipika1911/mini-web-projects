@@ -38,8 +38,8 @@ async function convertCurrency(e) {
   const fromCurrencyValue = fromCurrency.value;
   const toCurrencyValue = toCurrency.value;
 
-  if (amount < 0) {
-    alert("Please ener a valid amount");
+  if (isNaN(amount) || amount < 0) {
+    alert("Please enter a valid amount");
     return;
   }
 
