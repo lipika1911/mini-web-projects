@@ -6,6 +6,25 @@ body{
     text-align: center;
 }
 
+#controls {
+    font-size: 14px;
+    margin: 0 auto 10px auto;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.left-controls, .right-controls {
+    width: 45%;
+}
+
 #board{
     background-color: black;
 }
